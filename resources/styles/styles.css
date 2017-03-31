@@ -1,0 +1,26 @@
+body {
+  background: url("../../resources/img/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: inherit;
+}
+.jumbotron {
+  background: url("");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: inherit;
+  text-align: center;
+  text-shadow: 2px 2px 2px black;
+  font-family: 'UnifrakturCook', cursive;
+  font-size: 150px;
+}
+
+#meal-view {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 10px
+}

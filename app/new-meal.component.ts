@@ -27,13 +27,6 @@ import { Meal } from './meal.model';
         <input type="number" #newCalories><br>
       </div>
       <div class="col-md-2 new-label">
-
-      <label>Enter Meal Calorie:</label>
-      <br>
-      <select #newHigh class="select-option">
-      <option type="radio" [value]="1">Low </option><br>
-      <option type="radio" [value]="2">High </option><br>
-      </select>
       <button class="btn" (click)="submitForm(newName.value, newDetails.value, newCalories.value); newName.value=''; newDetails.value=''; newCalories.value='';">Add</button>
     </div>
     </div>
