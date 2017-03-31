@@ -6,7 +6,7 @@ import { Meal } from './meal.model';
   template: `
   <div class="row">
     <select (change)="onChange($event.target.value)">
-       <option value="allMeals" selected="selected">All Meals</option>
+       <option value="all-meals" selected="selected">All Meals</option>
        <option value="low-calorie">Low Calorie Meals</option>
        <option value="high-calorie">High Calorie Meals</option>
      </select>
@@ -46,7 +46,7 @@ export class MealListComponent {
   @Output() clickSender = new EventEmitter();
 
   findCount(currentMeal){}
-  filterByCount: string = "highCalorie";
+  filterByCount: string = "all-meals";
 
   editButtonHasBeenClicked(mealToEdit: Meal) {
     this.clickSender.emit(mealToEdit);
