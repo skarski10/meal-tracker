@@ -6,7 +6,7 @@ import { Meal } from './meal.model';
   template: `
   <div class="container">
     <div class="jumbotron">
-      <span>Tap Room</span>
+      <span>Meal Tracker</span>
     </div>
     <meal-list [childMealList]="masterMealList" (clickSender)="editMeal($event)"></meal-list>
     <hr>

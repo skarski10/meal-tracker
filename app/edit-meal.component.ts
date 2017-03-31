@@ -5,8 +5,8 @@ import { Meal } from './meal.model';
   selector: 'edit-meal',
   template: `
     <div *ngIf="childSelectedMeal">
-    <div id="edit-meal-form">
-      <h3>{{childSelectedMeal.brand}} - {{childSelectedMeal.name}}</h3>
+    <div>
+      <h3>{{childSelectedMeal.name}}</h3>
       <h3>Edit Meal</h3>
       <label>Edit Meal Information</label><br>
       <label>Name:</label>
@@ -17,8 +17,8 @@ import { Meal } from './meal.model';
       <input [(ngModel)]="childSelectedMeal.calories"><br>
       <label>Enter High or Low Calorie:</label>
       <br>
-      <input type="radio" [(ngModel)]="childSelectedMeal.style" [value]="1"> Low Calorie<br>
-      <input type="radio" [(ngModel)]="childSelectedMeal.style" [value]="2"> High Calorie<br>
+      <input type="radio" [(ngModel)]="childSelectedMeal.high" [value]="1"> Low Calorie<br>
+      <input type="radio" [(ngModel)]="childSelectedMeal.high" [value]="2"> High Calorie<br>
       <button (click)="doneButtonClicked()">Done</button>
       </div>
     </div>
