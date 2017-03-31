@@ -27,13 +27,16 @@ import { Meal } from './meal.model';
     <div class="row" id="meal-details">
       <div *ngFor="let currentMeal of childMealList | count:filterByCount" class="row">
         <div class="col-md-4" >
-          <span (click)="editButtonHasBeenClicked(currentMeal)" class="_{{currentMeal.calories}} name">{{currentMeal.name}}</span><br>
+          <span class="_{{currentMeal.calories}} name">{{currentMeal.name}}</span><br>
         </div>
         <div class="col-md-4 details">
           <span>{{currentMeal.details}}</span><br>
         </div>
-        <div class="col-md-4 calories">
+        <div class="col-md-3 calories">
           <span>{{currentMeal.calories}}</span><br>
+        </div>
+        <div class="col-md-1">
+          <button (click)="editButtonHasBeenClicked(currentMeal)" class="btn all-buttons">Edit!</button>
         </div>
       </div>
     </div>
