@@ -46,15 +46,12 @@ export class MealListComponent {
   @Output() clickSender = new EventEmitter();
 
   findCount(currentMeal){}
-  filterByCount: string = "high-calorie";
+  filterByCount: string = "highCalorie";
 
   editButtonHasBeenClicked(mealToEdit: Meal) {
     this.clickSender.emit(mealToEdit);
   }
   onChange(optionFromMenu) {
   this.filterByCount = optionFromMenu;
-  }
-  toggleHigh(clickedMeal: Meal, setCount: boolean) {
-     clickedMeal.high = setCount;
   }
 }
