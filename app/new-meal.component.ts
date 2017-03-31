@@ -4,32 +4,40 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'new-meal',
   template: `
-  <div class="add-new-meal">
-    <span id="new-meal-title">New Meal</span>
-    <div>
-      <label>Enter Meal:</label><br>
-      <div class="col-md-2 new-label">
-        <label>Name:</label>
-      </div>
-      <div class="col-md-10 new-input">
-        <input #newName><br>
-      </div>
-      <div class="col-md-2 new-label">
-        <label>Details:</label>
-      </div>
-      <div class="col-md-10 new-input">
-        <input #newDetails><br>
-      </div>
-      <div class="col-md-2 new-label">
-        <label>Calories:</label>
-      </div>
-      <div class="col-md-10 new-input">
-        <input type="number" #newCalories><br>
-      </div>
-      <div class="col-md-2 new-label">
-      <button class="btn" (click)="submitForm(newName.value, newDetails.value, newCalories.value); newName.value=''; newDetails.value=''; newCalories.value='';">Add</button>
+  <div class="add-new-meal" id="new-meal-form">
+    <div class="row most-titles">
+      <span>New Meal</span>
     </div>
+    <div class="row">
+      <div class="row">
+        <div class="col-md-6 new-label">
+          <label>Name:</label><br>
+        </div>
+        <div class="col-md-6 new-input">
+          <input #newName><br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 new-label" >
+          <label>Details:</label><br>
+        </div>
+        <div class="col-md-6 new-input" >
+          <textarea #newDetails></textarea><br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 new-label">
+          <label>Calories:</label>
+        </div>
+        <div class="col-md-6 new-input">
+          <input type="number" #newCalories><br>
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn all-buttons" id="add-new-button" (click)="submitForm(newName.value, newDetails.value, newCalories.value); newName.value=''; newDetails.value=''; newCalories.value='';">Add</button>
+      </div>
     </div>
+  </div>
   `
 })
 

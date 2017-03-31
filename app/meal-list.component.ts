@@ -12,7 +12,7 @@ import { Meal } from './meal.model';
      </select>
   </div>
   <div class="row" id="meal-view">
-    <div class="row">
+    <div class="row" id="meal-view-title">
      <div class="col-md-4">
        <span>Meal:</span>
      </div>
@@ -24,16 +24,16 @@ import { Meal } from './meal.model';
      </div>
     </div>
     <hr>
-    <div class="row">
+    <div class="row" id="meal-details">
       <div *ngFor="let currentMeal of childMealList | count:filterByCount" class="row">
         <div class="col-md-4" >
-          <span (click)="editButtonHasBeenClicked(currentMeal)" class="_{{currentMeal.calories}}" id="">{{currentMeal.name}}</span>
+          <span (click)="editButtonHasBeenClicked(currentMeal)" class="_{{currentMeal.calories}} name">{{currentMeal.name}}</span><br>
         </div>
-        <div class="col-md-4">
-          <span>{{currentMeal.details}}</span>
+        <div class="col-md-4 details">
+          <span>{{currentMeal.details}}</span><br>
         </div>
-        <div class="col-md-4">
-          <span>{{currentMeal.calories}}</span>
+        <div class="col-md-4 calories">
+          <span>{{currentMeal.calories}}</span><br>
         </div>
       </div>
     </div>
@@ -45,15 +45,8 @@ export class MealListComponent {
   @Input() childMealList: Meal[];
   @Output() clickSender = new EventEmitter();
 
-  filterByCount: string = "highMeals";
-
-  isHigh(clickedKeg: Meal) {
-  if(clickedKeg.calories >= 500) {
-    clickedKeg.high = true;
-  } else {
-    clickedKeg.high = false;
-  }
-}
+  findCount(currentMeal){}
+  filterByCount: string = "high-calorie";
 
   editButtonHasBeenClicked(mealToEdit: Meal) {
     this.clickSender.emit(mealToEdit);

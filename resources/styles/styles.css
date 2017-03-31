@@ -13,14 +13,91 @@ body {
   background-attachment: inherit;
   text-align: center;
   text-shadow: 2px 2px 2px black;
-  font-family: 'UnifrakturCook', cursive;
+  font-family: 'Macondo', cursive;
   font-size: 150px;
 }
-
 #meal-view {
   background-color: rgba(0, 0, 0, 0.6);
-  color: white;
+  color: lightgray;
   padding: 15px;
   border-radius: 5px;
-  margin-top: 10px
+  margin-top: 10px;
+  text-shadow: -1px -1px black;
+}
+#meal-details {
+  padding-left: 20px;
+}
+#new-meal-form {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: lightgray;
+  padding: 40px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-shadow: -1px -1px black;
+  text-align: center;
+}
+.most-titles {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#edit-meal-form {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: lightgray;
+  padding: 40px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-shadow: -1px -1px black;
+  text-align: center;
+}
+.all-buttons {
+  background-color: #E1593F;
+  color: #FFF;
+  text-align: center;
+  border: solid #AEDBD6;
+  box-shadow: rgba(0, 0, 0, 0.25) -2px 2px;
+  margin-top: 15px;
+}
+.new-label {
+  text-align: right;
+  font-size: 16px;
+}
+.new-input {
+  text-align: left;
+  color: black;
+}
+.edit-labels {
+  text-align: right;
+  font-size: 16px;
+}
+.edit-inputs {
+  text-align: left;
+  color: black;
+}
+#meal-view-title {
+  font-size: 32px;
+  font-family: "Nougatine";
+  text-align: center;
+}
+.name{
+  font-family: "Crimson Text";
+  font-size: 20px;
+  text-align: center;
+
+}
+.details {
+  font-family: "Crimson Text";
+  font-size: 20px;
+}
+.calories {
+  font-family: "Crimson Text";
+  font-size: 18px;
+  text-align: center;
+}
+input {
+  width: 25vw;
+}
+textarea {
+  width: 313px;
+  height: 91px;
 }
